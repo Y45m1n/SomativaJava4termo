@@ -1,9 +1,7 @@
 package com.example.view;
 
 import javax.swing.*;
-
 import com.example.controller.HotelController;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -39,7 +37,7 @@ public class TelaInicialView extends JFrame {
         painelBotoes.setLayout(new FlowLayout());
 
         JButton btnListarReservas = new JButton("Listar Reservas");
-        JButton btnFazerPagamento = new JButton("Fazer Pagamento");
+        JButton btnFazerPagamento = new JButton("Realizar Pagamento");
         JButton btnCadastrarCliente = new JButton("Cadastrar Cliente");
 
         btnListarReservas.addActionListener(e -> mostrarTelaListarReservas());
@@ -53,8 +51,9 @@ public class TelaInicialView extends JFrame {
         add(painelQuartos, BorderLayout.CENTER);
         add(painelBotoes, BorderLayout.SOUTH);
 
+        // Define o tamanho da janela
+        setSize(550, 400); // Altere os valores conforme necessário
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pack();
         setLocationRelativeTo(null); // Centraliza a janela
         setVisible(true);
     }

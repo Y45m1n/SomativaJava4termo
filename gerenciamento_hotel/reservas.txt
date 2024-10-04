@@ -1,0 +1,21 @@
+Reserva: 9da1e4ba-ea97-46d7-bb31-fb592863f50f, CPF: 123
+Reserva: 2659ffdd-71ec-4092-80d0-48ff7ed50250, Quarto: 1, CPF: 123, Data de Entrada: 2024-10-24, Data de Saída: 2024-10-26
+Reserva: ed67bf4f-e943-4f0f-b495-ef8580d5f998, Quarto: 1, CPF: 123, Data de Entrada: 2024-10-17, Data de Saída: 2024-10-10-------------------------------------------------------
+Reserva: 7ec12836-7ae2-4c03-ac29-a5e8e81b5d5e, Quarto: 10, CPF: 123, Data de Entrada: 2024-10-23, Data de Saída: 2024-10-17
+-------------------------------------------------------
+--------------------RECIBO DE RESERVA-------------------- 
+ Reserva: fb338519-3261-4518-9f21-fefe43b57787, Quarto: 4 
+, CPF: 123, Data de Entrada: 2024-10-17, Data de Saída: 2024-10-25
+-------------------------------------------------------
+--------------------RECIBO DE RESERVA-------------------- 
+ Reserva: 041916e9-821d-4189-a63f-f3544faf6594, Quarto: 5
+ , CPF: 123, Data de Entrada: 2024-10-25, Data de Saída: 2024-11-05
+-------------------------------------------------------
+--------------------RECIBO DE RESERVA-------------------- 
+ Reserva: 155a05ba-3dc5-451f-9984-3ec07514752a, Quarto: 4 
+  , CPF: 123, Data de Entrada: 2024-10-11, Data de Saída: 2024-10-28
+-------------------------------------------------------
+--------------------RECIBO DE RESERVA-------------------- 
+ Reserva: 6d8e9e6f-6243-43dc-ac61-516759ea980f, Quarto: 8 
+ CPF: 123, Data de Entrada: 2024-10-12, Data de Saída: 2024-11-08
+-------------------------------------------------------

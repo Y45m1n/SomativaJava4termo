@@ -1,10 +1,11 @@
 package com.example.dao;
 
-
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.example.model.Reserva;
 
 public class ReservaDAO {
@@ -19,7 +20,22 @@ public class ReservaDAO {
             stmt.setDate(4, Date.valueOf(reserva.getDataSaida()));
             stmt.setString(5, reserva.getNumeroReserva());
             stmt.executeUpdate();
+            
+            // Gravar a reserva em um arquivo
+            gravarReservaEmArquivo(reserva);
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void gravarReservaEmArquivo(Reserva reserva) {
+        String nomeArquivo = "reservas.txt"; // Nome do arquivo
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo, true))) {
+            // Escreve o número da reserva e o CPF do cliente
+            writer.write("--------------------RECIBO DE RESERVA-------------------- \n Reserva: " + reserva.getNumeroReserva() + ", Quarto: " + reserva.getNumeroQuarto() +  " \n CPF: " + reserva.getCpfCliente()+ ", Data de Entrada: " + reserva.getDataEntrada() + ", Data de Saída: " + reserva.getDataSaida() +"\n" );
+            writer.write("-------------------------------------------------------" );
+            writer.newLine(); // Adiciona nova linha
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -45,6 +61,4 @@ public class ReservaDAO {
         }
         return reservas;
     }
-
-    // Método para listar reservas por quarto (opcional)
 }

@@ -35,5 +35,9 @@ public class HotelController {
     public List<Reserva> listarReservas() {
         return reservaDAO.listar();
     }
+    public boolean isCpfCadastrado(String cpf) {
+        Cliente cliente = clienteDAO.buscarPorCpf(cpf); // Supondo que você tenha esse método no ClienteDAO
+        return cliente != null; // Retorna true se o cliente existir, false caso contrário
+    }
 }
 

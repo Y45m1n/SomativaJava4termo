@@ -7,6 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteDAO {
+    private List<Cliente> clientes;
+
+    public ClienteDAO() {
+        this.clientes = new ArrayList<>();
+        listar(); // Carregar clientes na inicialização
+    }
 
     public void salvar(Cliente cliente) {
         String sql = "INSERT INTO clientes (nome, cpf, telefone, email, endereco) VALUES (?, ?, ?, ?, ?)";
@@ -18,13 +24,14 @@ public class ClienteDAO {
             stmt.setString(4, cliente.getEmail());
             stmt.setString(5, cliente.getEndereco());
             stmt.executeUpdate();
+            clientes.add(cliente); // Adiciona o cliente à lista
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public List<Cliente> listar() {
-        List<Cliente> clientes = new ArrayList<>();
+        clientes.clear(); // Limpa a lista antes de popular
         String sql = "SELECT * FROM clientes";
         try (Connection conn = DatabaseConnection.getConnection();
              Statement stmt = conn.createStatement();
@@ -45,5 +52,12 @@ public class ClienteDAO {
         return clientes;
     }
 
-    // Métodos para editar e excluir clientes podem ser adicionados aqui
+    public Cliente buscarPorCpf(String cpf) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getCpf().equals(cpf)) {
+                return cliente; // Retorna o cliente se o CPF corresponder
+            }
+        }
+        return null; // Retorna null se não encontrar o cliente
+    }
 }
