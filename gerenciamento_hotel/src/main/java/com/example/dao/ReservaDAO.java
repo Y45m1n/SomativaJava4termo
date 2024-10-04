@@ -3,6 +3,7 @@ package com.example.dao;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,9 +32,8 @@ public class ReservaDAO {
     private void gravarReservaEmArquivo(Reserva reserva) {
         String nomeArquivo = "reservas.txt"; // Nome do arquivo
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo, true))) {
-            // Escreve o número da reserva e o CPF do cliente
-            writer.write("--------------------RECIBO DE RESERVA-------------------- \n Reserva: " + reserva.getNumeroReserva() + ", Quarto: " + reserva.getNumeroQuarto() +  " \n CPF: " + reserva.getCpfCliente()+ ", Data de Entrada: " + reserva.getDataEntrada() + ", Data de Saída: " + reserva.getDataSaida() +"\n" );
-            writer.write("-------------------------------------------------------" );
+            writer.write("--------------------RECIBO DE RESERVA-------------------- \n Reserva: " + reserva.getNumeroReserva() + ", Quarto: " + reserva.getNumeroQuarto() +  " \n CPF: " + reserva.getCpfCliente() + ", Data de Entrada: " + reserva.getDataEntrada() + ", Data de Saída: " + reserva.getDataSaida() + "\n");
+            writer.write("-------------------------------------------------------");
             writer.newLine(); // Adiciona nova linha
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,5 +60,25 @@ public class ReservaDAO {
             e.printStackTrace();
         }
         return reservas;
+    }
+
+    public boolean isQuartoReservado(int numeroQuarto, LocalDate dataEntrada, LocalDate dataSaida) {
+        String sql = "SELECT * FROM reservas WHERE numero_quarto = ? AND " +
+                     "((data_entrada <= ? AND data_saida >= ?) OR " + // Se a nova entrada se sobrepõe à reserva existente
+                     "(data_entrada <= ? AND data_saida >= ?))"; // Se a nova saída se sobrepõe à reserva existente
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, numeroQuarto);
+            stmt.setDate(2, Date.valueOf(dataSaida)); // Verifica até quando o quarto está reservado
+            stmt.setDate(3, Date.valueOf(dataEntrada)); // Verifica desde quando o quarto está reservado
+            stmt.setDate(4, Date.valueOf(dataSaida)); // Verifica até quando a nova reserva está
+            stmt.setDate(5, Date.valueOf(dataEntrada)); // Verifica desde quando a nova reserva está
+            
+            ResultSet rs = stmt.executeQuery();
+            return rs.next(); // Retorna true se já houver uma reserva
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false; // Em caso de erro, assume que o quarto não está reservado
+        }
     }
 }

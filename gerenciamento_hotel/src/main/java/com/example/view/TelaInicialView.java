@@ -74,7 +74,7 @@ public class TelaInicialView extends JFrame {
     }
 
     private void mostrarTelaPagamento() {
-        // Lógica para abrir a tela de pagamento
-        JOptionPane.showMessageDialog(this, "Tela de Pagamento (a implementar)");
+        new TelaPagamentoView(controller); // Cria a tela de pagamento
+        this.setVisible(false); // Oculta a tela inicial
     }
 }

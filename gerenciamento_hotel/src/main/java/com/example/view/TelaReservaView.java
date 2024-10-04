@@ -2,16 +2,12 @@ package com.example.view;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-import java.sql.Date; // Não vai ser necessário, mas pode ser usado se você precisar
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.UUID;
-
 import javax.swing.*;
-
 import org.jdatepicker.JDatePicker;
 import org.jdatepicker.UtilDateModel;
-
 import com.example.controller.HotelController;
 import com.example.model.Reserva;
 
@@ -79,6 +75,12 @@ public class TelaReservaView extends JFrame {
             // Converte as datas para LocalDate
             LocalDate dataEntrada = dataEntradaDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             LocalDate dataSaida = dataSaidaDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+            // Verifica se o quarto já está reservado nas datas selecionadas
+            if (controller.isQuartoReservado(numeroQuarto, dataEntrada, dataSaida)) {
+                JOptionPane.showMessageDialog(this, "O quarto já está reservado para as datas selecionadas. Favor escolher outras datas.");
+                return;
+            }
 
             try {
                 String numeroReserva = UUID.randomUUID().toString(); // Gera um número de reserva único

@@ -4,11 +4,9 @@ import java.util.List;
 
 import com.example.dao.ClienteDAO;
 import com.example.dao.ReservaDAO;
+import java.time.LocalDate;
 import com.example.model.Cliente;
 import com.example.model.Reserva;
-
-
-
 
 
 public class HotelController {
@@ -28,10 +26,13 @@ public class HotelController {
         return clienteDAO.listar();
     }
 
+    public boolean isQuartoReservado(int numeroQuarto, LocalDate dataEntrada, LocalDate dataSaida) {
+        return reservaDAO.isQuartoReservado(numeroQuarto, dataEntrada, dataSaida);
+    }
+
     public void reservarQuarto(Reserva reserva) {
         reservaDAO.salvar(reserva);
     }
-
     public List<Reserva> listarReservas() {
         return reservaDAO.listar();
     }
