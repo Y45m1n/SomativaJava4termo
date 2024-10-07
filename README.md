@@ -6,10 +6,10 @@ Desenvolver um sistema para gerenciar reservas, clientes e pagamentos em um hote
 ### OBJETIVOS: 
 **Específicos:**
 
-- Login do Funcionário;
 - Cadastro de Hóspedes;
-- Permitir que os funcionários cadastrem os hóspedes, realizem a reserva dos quartos e o pagamento da reserva;
-- Listar hóspedes e permitir editar e excluir;
+- Permitir que os funcionários cadastrem, editem e excluiam os hóspedes;
+- Realizem a reserva dos quartos e o pagamento da reserva;
+- Listar hóspedes e permitir baixar um relatório;
 - Listar todas as reservas;
 - Permitir que ao fazer a reserva do quarto,crie um arquivo com o número da reserva;
 - Permitir que ao fazer o pagamento da reserva, crie um arquivo com o recibo.
