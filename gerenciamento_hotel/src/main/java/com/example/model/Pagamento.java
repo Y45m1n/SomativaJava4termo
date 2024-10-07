@@ -1,38 +1,18 @@
 package com.example.model;
 
-
 import java.time.LocalDate;
 
-public class Pagamento {
-    private String numeroReserva;
-    private String cpfCliente;
+public class Pagamento extends Reserva {
     private double valor;
     private LocalDate dataPagamento;
 
-    public Pagamento(String numeroReserva, String cpfCliente, double valor, LocalDate dataPagamento) {
-        this.numeroReserva = numeroReserva;
-        this.cpfCliente = cpfCliente;
+    public Pagamento(String cpfCliente, int numeroQuarto, LocalDate dataEntrada, LocalDate dataSaida, String numeroReserva, double valor, LocalDate dataPagamento) {
+        super(cpfCliente, numeroQuarto, dataEntrada, dataSaida, numeroReserva);
         this.valor = valor;
         this.dataPagamento = dataPagamento;
     }
 
     // Getters e Setters
-    public String getNumeroReserva() {
-        return numeroReserva;
-    }
-
-    public void setNumeroReserva(String numeroReserva) {
-        this.numeroReserva = numeroReserva;
-    }
-
-    public String getCpfCliente() {
-        return cpfCliente;
-    }
-
-    public void setCpfCliente(String cpfCliente) {
-        this.cpfCliente = cpfCliente;
-    }
-
     public double getValor() {
         return valor;
     }
@@ -49,4 +29,3 @@ public class Pagamento {
         this.dataPagamento = dataPagamento;
     }
 }
-

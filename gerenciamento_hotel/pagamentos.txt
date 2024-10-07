@@ -1,0 +1,27 @@
+Mï¿½todo de Pagamento: PIX
+Valor Pago: R$ 200,00
+Nï¿½mero da Reserva: 3064beb0-8494-4a47-8000-627625ae99e3
+CPF Hï¿½spede: 123
+Nï¿½mero do Quarto: 7
+Data de Entrada: 2024-10-24
+Data de Saï¿½da: 2024-10-26
+Data do Pagamento: 2024-10-07
+
+Mï¿½todo de Pagamento: Dinheiro
+Valor Pago: R$ 200,00
+Nï¿½mero da Reserva: 3064beb0-8494-4a47-8000-627625ae99e3
+CPF Hï¿½spede: 123
+Nï¿½mero do Quarto: 7
+Data de Entrada: 2024-10-24
+Data de Saï¿½da: 2024-10-26
+Data do Pagamento: 2024-10-07
+
+Método de Pagamento: Cartão
+Valor Pago: R$ 800,00
+Número da Reserva: 27e5e065-d1f9-4f2c-971a-ea9966bde63d
+CPF Hóspede: 1
+Número do Quarto: 4
+Data de Entrada: 2024-10-11
+Data de Saída: 2024-10-19
+Data do Pagamento: 2024-10-07
+

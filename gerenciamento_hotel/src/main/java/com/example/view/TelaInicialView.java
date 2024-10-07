@@ -34,25 +34,28 @@ public class TelaInicialView extends JFrame {
 
         // Painel para os botões
         JPanel painelBotoes = new JPanel();
-        painelBotoes.setLayout(new FlowLayout());
+        painelBotoes.setLayout(new GridLayout(1, 4)); // 1 linha, 4 colunas
 
         JButton btnListarReservas = new JButton("Listar Reservas");
         JButton btnFazerPagamento = new JButton("Realizar Pagamento");
         JButton btnCadastrarCliente = new JButton("Cadastrar Cliente");
+        JButton btnListarClientes = new JButton("Listar Clientes"); // Novo botão
 
         btnListarReservas.addActionListener(e -> mostrarTelaListarReservas());
         btnFazerPagamento.addActionListener(e -> mostrarTelaPagamento());
         btnCadastrarCliente.addActionListener(e -> mostrarTelaCadastroCliente());
+        btnListarClientes.addActionListener(e -> mostrarTelaListarClientes()); // Ação para listar clientes
 
         painelBotoes.add(btnListarReservas);
         painelBotoes.add(btnFazerPagamento);
         painelBotoes.add(btnCadastrarCliente);
+        painelBotoes.add(btnListarClientes); // Adiciona o novo botão ao painel
 
         add(painelQuartos, BorderLayout.CENTER);
         add(painelBotoes, BorderLayout.SOUTH);
 
         // Define o tamanho da janela
-        setSize(550, 400); // Altere os valores conforme necessário
+        setSize(600, 400); // Aumente o tamanho, se necessário
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // Centraliza a janela
         setVisible(true);
@@ -75,6 +78,11 @@ public class TelaInicialView extends JFrame {
 
     private void mostrarTelaPagamento() {
         new TelaPagamentoView(controller); // Cria a tela de pagamento
+        this.setVisible(false); // Oculta a tela inicial
+    }
+
+    private void mostrarTelaListarClientes() {
+        new TelaListarClientesView(controller); // Método para listar clientes
         this.setVisible(false); // Oculta a tela inicial
     }
 }

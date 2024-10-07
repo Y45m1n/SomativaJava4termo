@@ -1,0 +1,8 @@
+
+ -------- RELATÓRIO DE HÓSPEDES -------- 
+ Nome: yas,
+ CPF: 123,
+ Telefone: 5668,
+ Email: yas@yas,
+ Endereço: teste
+ ---------------------------------------
