@@ -1,7 +1,7 @@
 # SISTEMA DE GERENCIAMENTO DE HOTEL
 
 ### ESCOPO:
-
+Desenvolver um sistema para gerenciar reservas, clientes e pagamentos em um hotel, facilitando o controle e a organização das operações diárias.
 -
 ### OBJETIVOS: 
 **Específicos:**
