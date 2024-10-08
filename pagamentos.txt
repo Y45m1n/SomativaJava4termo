@@ -1,18 +1,9 @@
-Método de Pagamento: Dinheiro
-Valor Pago: R$ 1800,00
-Número da Reserva: 7f25cf69-453d-40fa-8bd3-ef754eeaad24
-CPF Hóspede: 098
-Número do Quarto: 10
-Data de Entrada: 2024-12-13
-Data de Saída: 2024-12-31
-Data do Pagamento: 2024-10-08
-
 Método de Pagamento: PIX
-Valor Pago: R$ 800,00
-Número da Reserva: 24ede2b8-c35b-4728-a843-b358da6dea9f
+Valor Pago: R$ 900,00
+Número da Reserva: 02e5918b-c9c0-426c-91ef-36eee4380603
 CPF Hóspede: 123
 Número do Quarto: 1
-Data de Entrada: 2024-10-31
-Data de Saída: 2024-11-08
+Data de Entrada: 2024-11-13
+Data de Saída: 2024-11-22
 Data do Pagamento: 2024-10-08
 

@@ -66,10 +66,32 @@
 <p><img src="img/DiagramaUso.png" width="500px">
 
 ### DIAGRAMA DE CLASSE:
-<p><img src="img/DiagramaClasse.png" width="700px">
+<p><img src="img/DiagramaClasse.png" width="500px">
 
 ### DIAGRAMA DE FLUXO:
 
 <p><img src="img/DiagramaFluxo.png" width="500px">
 
 ### MANUAL DO USUÁRIO:
+
+Funcionalidades
+1. Adição de Clientes
+Tela de Cadastro: Acesse a tela de cadastro de clientes.
+Preencha os dados: Insira o CPF, nome e outras informações do cliente.
+Salvar: Clique no botão "Salvar" para adicionar o cliente ao sistema.
+2. Listagem de Clientes
+Tela de Listagem: Acesse a tela que lista todos os clientes cadastrados.
+Visualização: Você pode visualizar todos os clientes registrados no sistema.
+3. Realização de Reservas
+Selecionar Quarto: Acesse a tela de reserva e selecione o quarto desejado.
+Preencha os dados: Insira o CPF do cliente, a data de entrada e a data de saída.
+Verificação de Disponibilidade: O sistema verifica se o quarto está disponível nas datas informadas.
+Finalizar Reserva: Clique no botão "Reservar" para concluir a operação.
+4. Listagem de Reservas
+Tela de Listagem: Acesse a tela que lista todas as reservas feitas.
+Visualização: Veja detalhes como CPF do cliente, número do quarto e datas de entrada e saída.
+5. Pagamento
+Tela de Pagamento: Acesse a tela de pagamento.
+Preencha os dados: Insira o número da reserva e verifique os dados do cliente.
+Selecionar Método de Pagamento: Escolha entre cartão, dinheiro ou PIX.
+Finalizar Pagamento: Confirme o pagamento e receba um recibo.
