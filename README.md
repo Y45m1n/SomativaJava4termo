@@ -66,7 +66,7 @@
 <p><img src="img/DiagramaUso.png" width="500px">
 
 ### DIAGRAMA DE CLASSE:
-<p><img src="img/DiagramaClasse.png" width="500px">
+<p><img src="img/DiagramaClasse.png" width="700px">
 
 ### DIAGRAMA DE FLUXO:
 
