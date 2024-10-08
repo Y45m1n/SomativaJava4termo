@@ -21,3 +21,11 @@ CREATE TABLE reservas (
     numero_reserva VARCHAR(50) UNIQUE,
     FOREIGN KEY (cpf_cliente) REFERENCES clientes(cpf) ON DELETE CASCADE
 );
+
+CREATE TABLE pagamento (
+    id SERIAL PRIMARY KEY,
+    numero_reserva VARCHAR(50) NOT NULL,
+    cpf_cliente VARCHAR(50) NOT NULL,
+    valor DECIMAL(10, 2) NOT NULL,
+    data_pagamento DATE NOT NULL
+);
