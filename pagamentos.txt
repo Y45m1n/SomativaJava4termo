@@ -1,9 +1,0 @@
-Método de Pagamento: PIX
-Valor Pago: R$ 900,00
-Número da Reserva: 02e5918b-c9c0-426c-91ef-36eee4380603
-CPF Hóspede: 123
-Número do Quarto: 1
-Data de Entrada: 2024-11-13
-Data de Saída: 2024-11-22
-Data do Pagamento: 2024-10-08
-
